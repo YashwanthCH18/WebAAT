@@ -14,11 +14,14 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f7f4f8; /* Matches the background in the image */
+     /* background-color: #f7f4f8;  Matches the background in the image */
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      background-image: url('https://plus.unsplash.com/premium_photo-1669981123693-8b1f0fb5d4f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGluayUyMGFlc3RoZXRpY3xlbnwwfHwwfHx8MA%3D%3D');
+      background-size: cover;
+      background-attachment: fixed;
     }
 
     /* Login Container */
@@ -98,11 +101,11 @@
   </style>
 </head>
 <body>
-  <div class="login-container">
-    <h2>Login to Yo Chat</h2>
+  <div class="login-container" >
+    <h2>Login to YoChat</h2>
     <p>Please login to Continue</p>
-    <div class="login-form">
-      <form>
+    <div class="login-form" style="background-color: rgb(236, 164, 198);">
+      <form >
         <label for="email">Email</label>
         <input type="email" id="email" placeholder="Value">
         <label for="password">Password</label>

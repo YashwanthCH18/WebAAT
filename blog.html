@@ -5,14 +5,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontend Layout</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    // JavaScript to add/remove the 'scrolled' class
+    window.onscroll = function() {
+        var navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
+  </script>
+  <style>
+    body{
+      background-image: url('https://images.pexels.com/photos/5076531/pexels-photo-5076531.jpeg?auto=compress&cs=tinysrgb&w=600');
+       
+    
+    background-size: cover;
+    /*background-position: center center;*/
+    background-attachment: fixed; /* Optional: Makes background image stay fixed while scrolling */
+     /* Optional: Set the height of the header */
+    
+    align-items: center;
+    justify-content: center;
+}
+    /* Transparent Navbar */
+    .navbar {
+            position: fixed; /* Make navbar fixed */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            border-radius: 0;
+            z-index: 10; /* Keep navbar above carousel */
+            padding: 10px 0;
+            transition: background-color 0.3s ease-in-out; /* Smooth transition */
+        }
+        .navbar.scrolled {
+         background-color: #eee7e7; /* Solid color when scrolled */
+        }
+    
+        .navbar-header {
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+    
+        .navbar-brand {
+            padding: 0 !important;
+            height: 100%;
+        }
+    
+        .navbar-brand img {
+            height: 100%;
+            width: auto;
+            padding: 5px;
+        }
+    
+        .nav-links a {
+            color: rgb(214, 145, 205);
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    
+        .nav-links a:hover {
+            color: rgb(10, 10, 10);
+        }
+    
+        /* Carousel section */
+        .hero {
+            position: relative;
+            padding-bottom: 0%;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+    
+        .carousel-inner img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+    
+        .pricing, .blog, .contact {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .hover-shadow:hover {
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            transition: 0.3s ease-in-out;
+        }
+    
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+    
+        .post {
+            background: #ff9800;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+    
+        .contact {
+            text-align: center;
+        }
+    
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            background-color: rgb(120, 109, 122);
+        }
+        
+
+         footer .col-md-4 img {
+          margin-right: 10px; /* Add spacing between the images */
+        }
+         
+        a {
+            color: rgb(48, 46, 48);
+            font-weight: 700;
+        }
+        /* Button Styling */
+       button.get-started {
+       background-color: #e985e1;  /* Change the background color */
+       color: rgb(5, 5, 5);               /* Change the text color */
+       border: none;               /* Remove border */
+       padding: 10px 20px;         /* Adjust padding */
+       font-size: 16px;            /* Adjust font size */
+       border-radius: 0px;         /* Optional: Make corners rounded */
+       cursor: pointer;           /* Pointer cursor on hover */
+     }
+     #icons{
+        width: auto;
+    max-width: 70px;  /* Maximum width */
+    max-height: 70px; /* Maximum height */
+     }
+
+      /* Button Hover Effect */
+     button.get-started:hover {
+    background-color: #f5f2f1;  /* Darker shade on hover */
+    color: #0e0d0d;                /* Ensure text color stays white */
+    }
+      div.col-md-4 img{
+        width: 100%;             /* Make image fill the width of its container */
+    height: 100%;            /* Make image fill the height of its container */
+    object-fit: cover;       /* Ensure the image covers the area without distortion */
+    border-radius: 10px;     /* Optional: Adds rounded corners */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+         
+      }
+
+   
+    
+  </style>
 </head>
-<body>
+<body >
 
   <!-- Navbar -->
   <header class="navbar">
     <div class="navbar-container">
-      <div class="logo">Logo</div>
-      <nav class="nav-links">
+        <div class="logo" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(218, 140, 188);">YoChat</div>
+        <nav class="nav-links" style="color: rgb(8, 8, 8);">
         <a href="index.html">Home</a>
         <a href="index.html#about">About us</a>
         <a href="index.html#pricing">Pricing</a>
